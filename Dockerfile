@@ -11,7 +11,7 @@ RUN echo "${CHECKSUM}  ccu-historian-${VERSION}-bin.zip" | sha512sum -c - && \
     mkdir /tmp/ccu-historian && \
     unzip ccu-historian-${VERSION}-bin.zip -d /tmp/ccu-historian
 
-FROM openjdk:8-jre
+FROM balenalib/raspberry-pi-openjdk:8-stretch
 
 ENV TZ UTC
 
